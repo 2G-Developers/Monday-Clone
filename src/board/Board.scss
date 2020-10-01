@@ -1,0 +1,44 @@
+.board {
+    // height: 100%;
+    margin-top: 2rem;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    &__view {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-bottom: 1px solid #000;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &__interact {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0 1rem;
+        padding: .2rem .5rem;
+        border-radius: 3px;
+
+        &:hover {
+            background: #E6E9EF;
+        }
+    }
+}
