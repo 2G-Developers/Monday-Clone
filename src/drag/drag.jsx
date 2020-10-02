@@ -92,7 +92,7 @@ activateLasers(){
         <div onClick={this.toggleSidebar} className={listState[this.state.caret]}>
             <DragSortableList items={list} type="vertical"/>
         </div>
-        {this.state.sidebarActive ? (<div className="backdrop" onClick={this.toggleSidebar}></div>): null}
+        {this.state.sidebarActive ? (<div className="backdrop" onClick={this.toggleSidebar} style={{zIndex: "500"}}></div>): null}
         <Tasksidebar sidebarState={this.state.sidebarActive} sidebarClick={this.toggleSidebar}/>
     </div>
   );
