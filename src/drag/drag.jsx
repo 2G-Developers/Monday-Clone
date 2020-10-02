@@ -29,15 +29,15 @@ class Bar extends React.Component {
             }<a role="button" title="Edit" className="showme" onClick={this.handleEditClick.bind(this)}><span>✏️</span></a>
         </div>
         <div className="comment">
-            <ChatIcon style={{strokeWidth: "1.5", stroke: "#c5c7d0"}}/>
+            <ChatIcon style={{strokeWidth: "1.5", stroke: "#c5c7d0", width: "1.5rem", height: "1.5rem"}}/>
         </div>
         <div className="vline"></div> 
         <div className="comment">
-            <UserIcon style={{ stroke: "#c5c7d0"}} />
+            <UserIcon style={{ stroke: "#c5c7d0", width: "1.5rem", height: "1.5rem"}} />
         </div>
         <div className="vline"></div> 
         <div className="comment">
-            <ListIcon style={{ stroke: "#c5c7d0"}} />
+            <ListIcon style={{ stroke: "#c5c7d0", width: "1.5rem", height: "1.5rem"}} />
         </div>
         <div className="vline"></div> 
         <div className="priority-place" style={{backgroundColor: this.props.prioritycolor }} title="level" >

@@ -17,17 +17,17 @@ export default class Board extends Component {
         return (
             <div className="board">
                 <div className="board__nav">
-                    <div className="board__view">Default <ColumnsIcon style={{strokeWidth: "1",width: "25", height: "22", marginLeft: ".5rem", stroke: "#323338"}} /></div>
+                    <div className="board__view">Default <ColumnsIcon style={{strokeWidth: "1",width: "1.5625rem", height: "1.375rem", marginLeft: ".5rem", stroke: "#323338"}} /></div>
                     <div className="board__interact">
                         <ul>
                             <li className="board__item">
-                                <a href="index.html" className="board__link"><SearchIcon style={{strokeWidth: "1",width: "15", height: "22", marginRight: ".5rem"}} />Search</a>
+                                <a href="index.html" className="board__link"><SearchIcon style={{strokeWidth: "1",width: ".9375rem", height: "1.375rem", marginRight: ".5rem"}} />Search</a>
                             </li>
                             <li className="board__item">
-                                <a href="index.html" className="board__link"><FilterIcon style={{strokeWidth: "1",width: "15", height: "22", marginRight: ".5rem"}} />Filter</a>
+                                <a href="index.html" className="board__link"><FilterIcon style={{strokeWidth: "1",width: ".9375rem", height: "1.375rem", marginRight: ".5rem"}} />Filter</a>
                             </li>
                             <li className="board__item">
-                                <a href="index.html" className="board__link"><SlidersIcon style={{strokeWidth: "1",width: "15", height: "22", marginRight: ".5rem"}} />Sort</a>
+                                <a href="index.html" className="board__link"><SlidersIcon style={{strokeWidth: "1",width: ".9375rem", height: "1.375rem", marginRight: ".5rem"}} />Sort</a>
                             </li>
                         </ul>
                     </div>

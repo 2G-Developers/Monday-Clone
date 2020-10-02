@@ -13,6 +13,7 @@
     &__description {
         font-size: .875rem;
         color: #323338;
+        border: 1px dashed transparent;
 
         &:hover {
             border: 1px dashed #c4c4c4;
@@ -24,6 +25,7 @@
         font-weight: 600;
         color: #323338;
         flex-grow: 1;
+        border: 1px dashed transparent;
         display: flex;
         align-items: flex-end;
 
@@ -84,8 +86,8 @@
 
 .hexagon-container {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     opacity: .5;
 
     &:hover {
@@ -98,19 +100,19 @@
 
         img {
             border-radius: 50%;
-            width: 30px !important;
-            height: 30px !important;
+            width: 1.875rem !important;
+            height: 1.875rem !important;
         }
     }
 
     &--one {
-        margin-left: -19px;
+        margin-left: -1.1875rem;
     }
 
     img {
         position: absolute;
-        width: 18px;
-        height: 18px;
+        width: 1.125rem;
+        height: 1.125rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

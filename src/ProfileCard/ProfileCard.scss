@@ -5,7 +5,7 @@
     // margin: 10px auto;
 
     &__text {
-        font-size: 15px;
+        font-size: 0.9375rem;
         color: #323338;
 
         &--green {
@@ -38,7 +38,7 @@
         border: 2px solid #333;
         border-radius: 20px;
         width: 250px;
-        height: 18px;
+        height: 1.125rem;
         margin: 0 auto;
     }
 
@@ -55,12 +55,12 @@
 
         &--top {
             background: #f65f7c;
-            height: 9px;
+            height: .5625rem;
         }
 
         &--bottom {
             background: #e2445c;
-            height: 9px;
+            height: .5625rem;
         }
     }
 }

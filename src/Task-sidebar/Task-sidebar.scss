@@ -3,7 +3,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    width: 550px;
+    width: 34.375rem;
     background: #fff;
     z-index: 500;
     padding: 2rem 1rem;
@@ -15,7 +15,7 @@
     }
 
     &__title {
-        font-size: 20px;
+        font-size: 1.125rem;
         font-weight: 700;
         display: flex;
         justify-content: space-between;
@@ -27,10 +27,10 @@
 
     &__updates {
         margin-top: 2rem;
-        font-size: 13px;
+        font-size: .8125rem;
         color: #676879;
         border: 1px solid #676879;
-        padding: 15px;
+        padding: .9375rem;
         text-align: center;
     }
 
@@ -40,9 +40,10 @@
         input {
             border: 1px solid #0085ff;
             border-radius: 8px;
-            padding: 10px 20px;
+            padding: .625rem 1.25rem;
             cursor: text;
             width: 96%;
+            font-size: 1rem;
         }
     }
 }

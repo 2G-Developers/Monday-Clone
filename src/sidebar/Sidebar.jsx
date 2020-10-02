@@ -21,17 +21,17 @@ export default class Sidebar extends Component {
                             <ul>
                                 <li class="sidebar__icon sidebar__icon--active">
                                     <a href="index.html" className="sidebar__link">
-                                        <GridIcon style={{strokeWidth: "1", "width":"30","height":"30"}} />
+                                        <GridIcon style={{strokeWidth: "1", "width":"1.875rem","height":"1.875rem"}} />
                                     </a>
                                 </li>
                                 <li class="sidebar__icon">
                                     <a href="index.html" className="sidebar__link">
-                                        <BellIcon style={{strokeWidth: "1", "width":"30","height":"30"}} />
+                                        <BellIcon style={{strokeWidth: "1", "width":"1.875rem","height":"1.875rem"}} />
                                     </a>
                                 </li>
                                 <li class="sidebar__icon">
                                     <a href="index.html" className="sidebar__link">
-                                        <DownloadIcon style={{strokeWidth: "1", "width":"30","height":"30"}} />
+                                        <DownloadIcon style={{strokeWidth: "1", "width":"1.875rem","height":"1.875rem"}} />
                                     </a>
                                 </li>
                             </ul>
@@ -41,17 +41,17 @@ export default class Sidebar extends Component {
                             <ul>
                                 <li class="sidebar__icon">
                                     <a href="index.html" className="sidebar__link">
-                                        <CalendarIcon style={{strokeWidth: "1", "width":"30","height":"30"}} />
+                                        <CalendarIcon style={{strokeWidth: "1", "width":"1.875rem","height":"1.875rem"}} />
                                     </a>
                                 </li>
                                 <li class="sidebar__icon">
                                     <a href="index.html" className="sidebar__link">
-                                        <SearchIcon style={{strokeWidth: "1", "width":"30","height":"30"}} />
+                                        <SearchIcon style={{strokeWidth: "1", "width":"1.875rem","height":"1.875rem"}} />
                                     </a>
                                 </li>
                                 <li class="sidebar__icon">
                                     <a href="index.html" className="sidebar__link">
-                                        <HelpCircleIcon style={{strokeWidth: "1", "width":"30","height":"30"}} />
+                                        <HelpCircleIcon style={{strokeWidth: "1", "width":"1.875rem","height":"1.875rem"}} />
                                     </a>
                                 </li>
                             </ul>
@@ -62,12 +62,12 @@ export default class Sidebar extends Component {
                         <ul>
                             <li className="sidebar__icon sidebar__icon-small">
                                 <div className="sidebar__link">
-                                    <StarIcon style={{strokeWidth: "1", "width":"20","height":"20"}} />
+                                    <StarIcon style={{strokeWidth: "1", "width":"1.25rem","height":"1.25rem"}} />
                                 </div>
                             </li>
                             <li className="sidebar__icon sidebar__icon-small">
                                 <div className="sidebar__link">
-                                    <ApertureIcon style={{strokeWidth: "1", "width":"20","height":"20"}}/>
+                                    <ApertureIcon style={{strokeWidth: "1", "width":"1.25rem","height":"1.25rem"}}/>
                                 </div>
                             </li>
                             <li className="sidebar__icon sidebar__icon-small">
