@@ -69,9 +69,9 @@ activateLasers(){
  render() {  
  var listState = {true:"app-list-set",false:"app-list-set-hide"} 
      var list = [
-    {content: <Bar text={"Test1"} prioritycolor="#FDAB3D" priority="MEDIUM" />},
-    {content: <Bar text={"Test2"} prioritycolor="#E2445C" priority="HIGH" />},
-    {content: <Bar text={"Test3"} prioritycolor="#00C875" priority="LOW" />}
+    {content: <Bar text={"Test1"} prioritycolor="#FDAB3D" priority="Medium" />},
+    {content: <Bar text={"Test2"} prioritycolor="#E2445C" priority="High" />},
+    {content: <Bar text={"Test3"} prioritycolor="#00C875" priority="Low" />}
 
 ];
 

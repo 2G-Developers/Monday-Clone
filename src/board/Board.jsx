@@ -4,6 +4,7 @@ import {ReactComponent as SearchIcon} from '../assets/icons/search.svg';
 import {ReactComponent as FilterIcon} from '../assets/icons/filter.svg';
 import {ReactComponent as SlidersIcon} from '../assets/icons/sliders.svg';
 import {ReactComponent as ColumnsIcon} from '../assets/icons/columns.svg';
+import {ReactComponent as CircleCheckIcon} from '../assets/icons/circle-check.svg';
 
 import './Board.scss'
 import Draggable from '../drag/drag';
@@ -29,9 +30,84 @@ export default class Board extends Component {
                     </div>
                 </div>
                 <div className="board__workspace">
-                    <Draggable />
-                    <Draggable />
-                    <Draggable />
+                    <div className="side__card">
+                        <div className="card">
+                            <div className="card__header">
+                                <h3>Complete Your Profile</h3>
+                            </div>
+                            <div className="card__body">
+                                <div className="card__list">
+                                    <div className="card__item">
+                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <span className="card__text">Setup Account</span>
+                                    </div>
+                                </div>
+                                <div className="card__list">
+                                    <div className="card__item">
+                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <span className="card__text">Upload Your Photo</span>
+                                    </div>
+                                </div>
+                                <div className="card__list">
+                                    <div className="card__item">
+                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <span className="card__text">Enable Desktop Notification</span>
+                                    </div>
+                                </div>
+                                <div className="card__list">
+                                    <div className="card__item">
+                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <span className="card__text">Invite Team Members (0/1)</span>
+                                    </div>
+                                </div>
+                                <div className="card__list">
+                                    <div className="card__item">
+                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <span className="card__text">Complete Profile</span>
+                                    </div>
+                                </div>
+                                <div className="card__list">
+                                    <div className="card__item">
+                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <span className="card__text">Install Our Mobile App</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card__footer">
+                                <div className="battery__power">
+                                    <div className="battery__wrapper">
+                                        <div className="battery__fill">
+                                            <div className="battery__fill--top"></div>
+                                            <div className="battery__fill--bottom"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="inbox">
+                            <div className="inbox__title">Inbox View Options</div>
+                            <div className="inbox__input">
+                                <div className="inbox__input-group">
+                                    <input type="radio" id="update" name="inbox" value="update" />
+                                    <label for="update">Inbox Updates</label>
+                                </div>
+                                <div className="inbox__input-group">
+                                    <input type="radio" id="mention" name="inbox" value="mention" />
+                                    <label for="mention">I was Mentioned</label>
+                                </div>
+                                <div className="inbox__input-group">
+                                    <input type="radio" id="office" name="inbox" value="office" />
+                                    <label for="office">All Updates of Google</label>
+                                </div>
+                                <div className="inbox__input-group">
+                                    <input type="radio" id="bookmark" name="inbox" value="bookmark" />
+                                    <label for="bookmark">Bookmarked Updates</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <Draggable />
                 </div>
             </div>
