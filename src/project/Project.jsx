@@ -13,7 +13,7 @@ export default class Project extends Component {
                 <div className="project">
                     <div className="project__header">
                         <div className="project__title">
-                            Project Planning <StarIcon className="star-icon" style={{width: "30", height: "30", marginLeft: "1rem", fill: "#e6e9ef", stroke: "#e6e9ef"}} />
+                            Project Planning <StarIcon className="star-icon" style={{strokeWidth: "1",width: "30", height: "30", marginLeft: "1rem", fill: "#e6e9ef", stroke: "#e6e9ef"}} />
                         </div>
                         <div className="project__integrate">
                             <div className="project__user-icon">
@@ -44,7 +44,7 @@ export default class Project extends Component {
                             <div className="project__text">Automate / <span>2</span></div>
 
                             <a href="index.html" className="project__button project__button--secondary">
-                                <UsersIcon style={{width: "16", height: "16"}} />/ <span>1</span>
+                                <UsersIcon style={{strokeWidth: "1",width: "16", height: "16"}} />/ <span>1</span>
                             </a>
                             
                             <a href="index.html" className="project__button">
