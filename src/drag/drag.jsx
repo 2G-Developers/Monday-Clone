@@ -22,13 +22,15 @@ class Bar extends React.Component {
     return (
     <div className="parent">
         <div className="color-code"></div>
-        <div className="text-place">
-            <input type="text" className="text-box" value={this.props.text} disabled={!this.state.editModeEnabled}/>
+        <div className="text-place" >
+            <span  onClick={() => this.props.clickfunc(this.props.text)}>
+                <input type="text" className="text-box" value={this.props.text} disabled={!this.state.editModeEnabled} />
+            </span>    
             {
             // eslint-disable-next-line
             }<a role="button" title="Edit" className="showme" onClick={this.handleEditClick.bind(this)}><span>✏️</span></a>
         </div>
-        <div className="comment">
+        <div className="comment" >
             <ChatIcon style={{strokeWidth: "1.5", stroke: "#c5c7d0"}}/>
         </div>
         <div className="vline"></div> 
@@ -60,13 +62,17 @@ class Draggable extends React.Component {
     super()
     this.state = {
       caret: true,
-      sidebarActive: false
+      sidebarActive: false,
+      setName: "sample"
     }
       
   }
 
-toggleSidebar = () => {
+toggleSidebar = (i) => {
     this.setState((prevState) => ({sidebarActive: !prevState.sidebarActive}))
+    if (i!=0){
+        this.setState((prevState) => ({ setName: i }))
+    }
 }
 
 activateLasers(){
@@ -74,10 +80,13 @@ activateLasers(){
 }
  render() {  
  var listState = {true:"app-list-set",false:"app-list-set-hide"} 
+ var set1 = "Lorem ipsum dolor"
+ var set2 = "sit amet consectetur adipisi"
+ var set3 = "elit. Quod ipsum optio"
      var list = [
-    {content: <Bar text={"Lorem ipsum dolor"} prioritycolor="#FDAB3D" priority="Medium" />},
-    {content: <Bar text={"sit amet consectetur adipisi"} prioritycolor="#E2445C" priority="High" />},
-    {content: <Bar text={"elit. Quod ipsum optio"} prioritycolor="#00C875" priority="Low" />}
+    {content: <Bar text={set1} prioritycolor="#FDAB3D" priority="Medium" clickfunc={this.toggleSidebar} />},
+    {content: <Bar text={set2} prioritycolor="#E2445C" priority="High" clickfunc={this.toggleSidebar} />},
+    {content: <Bar text={set3} prioritycolor="#00C875" priority="Low" clickfunc={this.toggleSidebar} />}
 
 ];
 
@@ -89,11 +98,11 @@ activateLasers(){
              <div class="app-text"> Phase 2 </div>
          </div>
 
-        <div onClick={this.toggleSidebar} className={listState[this.state.caret]}>
+        <div  className={listState[this.state.caret]}>
             <DragSortableList items={list} type="vertical"/>
         </div>
-        {this.state.sidebarActive ? (<div className="backdrop" onClick={this.toggleSidebar}></div>): null}
-        <Tasksidebar sidebarState={this.state.sidebarActive} sidebarClick={this.toggleSidebar}/>
+        {this.state.sidebarActive ? (<div className="backdrop" onClick={this.toggleSidebar} style={{zIndex: "500"}}></div>): null}
+        <Tasksidebar value={this.state.setName} sidebarState={this.state.sidebarActive} sidebarClick={this.toggleSidebar}/>
     </div>
   );
     }

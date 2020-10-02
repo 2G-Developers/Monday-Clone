@@ -8,8 +8,8 @@ export default class Tasksidebar extends Component {
         return (
             <div className={this.props.sidebarState ? 'task-sidebar task-sidebar--animate': 'task-sidebar'}>
                 <div className="task-sidebar__title">
-                    <span>Task 4</span>
-                    <XIcon onClick={this.props.sidebarClick}/>
+                    <span>{this.props.value}</span>
+                    <XIcon onClick={()=>this.props.sidebarClick(0)}/>
                 </div>
                 <div className="task-sidebar__input">
                     <input type="text" placeholder="Write an update..." />
