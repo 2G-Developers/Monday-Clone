@@ -32,12 +32,18 @@
         }
 
         input {
-            border: 1px solid #0085ff;
-            border-radius: 8px;
+            border: 1px solid #323338;
+            border-radius: 3px;
             padding: .6275rem 1.25rem;
             font-size: 1rem;
             cursor: text;
             flex-grow: 1;
+            outline: none;
+
+            &:focus {
+                border: 1px solid #0085ff;
+                outline: none;
+            }
         }
     }
 
