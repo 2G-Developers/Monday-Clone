@@ -20,15 +20,18 @@ export default class Workspace extends Component {
         }
     }
 
-    toggleWorkspace = () => {
+    toggleWorkspace = (e) => {
+        e.preventDefault();
         this.setState((prevState) => ({ active: !prevState.active }))
     }
 
-    toggleDropdown = () => {
+    toggleDropdown = (e) => {
+        e.preventDefault();
         this.setState((prevState) => ({ dropdownActive: !prevState.dropdownActive }))
     }
 
-    toggleDialog = () => {
+    toggleDialog = (e) => {
+        e.preventDefault();
         this.setState((prevState) => ({ dialogActive: !prevState.dialogActive }))
     }
 
@@ -81,7 +84,9 @@ export default class Workspace extends Component {
                 <div className="workspace__menu">
                     <ul>
                         <li className="workspace__list">
-                            <a className="workspace__link" href="javascript:return void(0);" onClick={this.toggleDropdown}>
+                            {
+                            // eslint-disable-next-line
+                            }<a className="workspace__link" href="javascript:return void(0);" onClick={this.toggleDropdown}>
                                 <span className="workspace__icon">
                                     <PlusCircleIcon style={{"width":"14","height":"21"}} />
                                 </span>
@@ -89,7 +94,10 @@ export default class Workspace extends Component {
                             </a>
                             <div className={this.state.dropdownActive ? 'dropdown-content dropdown-content--toggle': 'dropdown-content'}>
                                 <ul>
-                                    <li className="dropdown__item" onClick={this.toggleDialog}><a className="dropdown__link" href="javascript:return void(0);"><SidebarIcon style={{"width":"14","height":"21", marginRight: ".5rem"}} /> New Blank Board</a></li>
+                                    <li className="dropdown__item" onClick={this.toggleDialog}>
+                                    {
+                                        // eslint-disable-next-line
+                                    }<a className="dropdown__link" href="javascript:return void(0);"><SidebarIcon style={{"width":"14","height":"21", marginRight: ".5rem"}} /> New Blank Board</a></li>
                                     <li className="dropdown__item"><a className="dropdown__link" href="index.html"><BarChartIcon style={{"width":"14","height":"21", marginRight: ".5rem"}} /> New Blank Dashboard</a></li>
                                     <li className="dropdown__item"><a className="dropdown__link" href="index.html"><AwardIcon style={{"width":"14","height":"21", marginRight: ".5rem"}} /> New from Template</a></li>
                                     <li className="dropdown__item"><a className="dropdown__link" href="index.html"><FolderIcon style={{"width":"14","height":"21", marginRight: ".5rem"}} /> New Folder</a></li>
