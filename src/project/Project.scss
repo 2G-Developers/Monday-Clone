@@ -32,6 +32,15 @@
         }
     }
 
+    .star-icon {
+        cursor: pointer;
+
+        &:hover {
+            fill: #ffcb00 !important;
+            stroke: #ffcb00 !important;
+        }
+    }
+
     &__socials {
         display: flex;
         margin-right: 1rem;
@@ -77,9 +86,15 @@
     position: relative;
     width: 40px;
     height: 40px;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
 
     &--circle {
         border-radius: 50%;
+        opacity: 1;
 
         img {
             border-radius: 50%;

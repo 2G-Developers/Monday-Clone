@@ -13,7 +13,7 @@ export default class Board extends Component {
         return (
             <div className="board">
                 <div className="board__nav">
-                    <div className="board__view">Default <ColumnsIcon style={{width: "15", height: "22", marginLeft: ".5rem"}} /></div>
+                    <div className="board__view">Default <ColumnsIcon style={{width: "25", height: "22", marginLeft: ".5rem", stroke: "#323338"}} /></div>
                     <div className="board__interact">
                         <ul>
                             <li className="board__item">

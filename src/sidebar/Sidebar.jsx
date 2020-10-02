@@ -70,6 +70,13 @@ export default class Sidebar extends Component {
                                     <ApertureIcon style={{"width":"20","height":"20"}}/>
                                 </div>
                             </li>
+                            <li className="sidebar__icon sidebar__icon-small">
+                                <div className="sidebar__link">
+                                    <div className="workspace__text-icon">
+                                        <span>M</span>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
