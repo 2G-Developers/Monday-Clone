@@ -57,6 +57,10 @@
     &__text {
         font-size: 15px;
         color: #323338;
+
+        &--green {
+            color: #00c875;
+        }
     }
 
     &__list {

@@ -5,6 +5,7 @@ import {ReactComponent as FilterIcon} from '../assets/icons/filter.svg';
 import {ReactComponent as SlidersIcon} from '../assets/icons/sliders.svg';
 import {ReactComponent as ColumnsIcon} from '../assets/icons/columns.svg';
 import {ReactComponent as CircleCheckIcon} from '../assets/icons/circle-check.svg';
+import {ReactComponent as CircleIcon} from '../assets/icons/circle.svg';
 
 import './Board.scss'
 import Draggable from '../drag/drag';
@@ -39,36 +40,36 @@ export default class Board extends Component {
                                 <div className="card__list">
                                     <div className="card__item">
                                         <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text">Setup Account</span>
+                                        <span className="card__text card__text--green">Setup Account</span>
                                     </div>
                                 </div>
                                 <div className="card__list">
                                     <div className="card__item">
                                         <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text">Upload Your Photo</span>
+                                        <span className="card__text card__text--green">Upload Your Photo</span>
                                     </div>
                                 </div>
                                 <div className="card__list">
                                     <div className="card__item">
                                         <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text">Enable Desktop Notification</span>
+                                        <span className="card__text card__text--green">Enable Desktop Notification</span>
                                     </div>
                                 </div>
                                 <div className="card__list">
                                     <div className="card__item">
-                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
                                         <span className="card__text">Invite Team Members (0/1)</span>
                                     </div>
                                 </div>
                                 <div className="card__list">
                                     <div className="card__item">
-                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
                                         <span className="card__text">Complete Profile</span>
                                     </div>
                                 </div>
                                 <div className="card__list">
                                     <div className="card__item">
-                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                        <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
                                         <span className="card__text">Install Our Mobile App</span>
                                     </div>
                                 </div>
