@@ -1,0 +1,29 @@
+.inbox {
+    margin-top: 2rem;
+    width: 300px;
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+
+        &-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            margin-left: 1rem;
+
+            input {
+                margin-right: 0.5rem;
+            }
+
+            label {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+}

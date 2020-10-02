@@ -1,0 +1,66 @@
+.card {
+    width: 300px;
+    box-shadow: 0 4px 15px rgb(197, 199, 208);
+    border-radius: 3px;
+    // margin: 10px auto;
+
+    &__text {
+        font-size: 15px;
+        color: #323338;
+
+        &--green {
+            color: #00c875;
+        }
+    }
+
+    &__list {
+        margin-bottom: 0.5rem;
+    }
+
+    &__header {
+        padding: 1rem 0 1rem 1rem;
+    }
+
+    &__body {
+        border-bottom: 1px solid rgb(197, 199, 208);
+        padding: 0 0 1rem 1rem;
+    }
+
+    &__footer {
+        padding: 1rem 0 1rem 1rem;
+    }
+}
+
+.battery {
+    &__power {
+        background: #fff;
+        padding: 0;
+        border: 2px solid #333;
+        border-radius: 20px;
+        width: 250px;
+        height: 18px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__fill {
+        display: block;
+        width: 33.3333%;
+        opacity: 1;
+
+        &--top {
+            background: #f65f7c;
+            height: 9px;
+        }
+
+        &--bottom {
+            background: #e2445c;
+            height: 9px;
+        }
+    }
+}
