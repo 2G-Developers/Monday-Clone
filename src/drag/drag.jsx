@@ -6,6 +6,7 @@ import {ReactComponent as ArrowLeftCircle} from '../assets/icons/arrow-left-circ
 import {ReactComponent as ChatIcon} from '../assets/icons/chat.svg';
 import {ReactComponent as ListIcon} from '../assets/icons/list.svg';
 import {ReactComponent as UserIcon} from '../assets/icons/user.svg';
+import Tasksidebar from '../Task-sidebar/Task-sidebar';
 
 class Bar extends React.Component {
   constructor() {
@@ -59,9 +60,14 @@ class Draggable extends React.Component {
     super()
     this.state = {
       caret: true,
+      sidebarActive: false
     }
       
   }
+
+toggleSidebar = () => {
+    this.setState((prevState) => ({sidebarActive: !prevState.sidebarActive}))
+}
 
 activateLasers(){
     this.setState((prevState) => ({caret: !prevState.caret}));
@@ -83,10 +89,11 @@ activateLasers(){
              <div class="app-text"> Phase 2 </div>
          </div>
 
-        <div className={listState[this.state.caret]}>
-            
-            <DragSortableList items={list}   type="vertical"/>
+        <div onClick={this.toggleSidebar} className={listState[this.state.caret]}>
+            <DragSortableList items={list} type="vertical"/>
         </div>
+        {this.state.sidebarActive ? (<div className="backdrop" onClick={this.toggleSidebar}></div>): null}
+        <Tasksidebar sidebarState={this.state.sidebarActive} sidebarClick={this.toggleSidebar}/>
     </div>
   );
     }
