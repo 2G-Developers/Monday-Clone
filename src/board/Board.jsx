@@ -31,79 +31,115 @@ export default class Board extends Component {
                     </div>
                 </div>
                 <div className="board__workspace">
-                    <div className="side__card">
-                        <div className="card">
-                            <div className="card__header">
-                                <h3>Complete Your Profile</h3>
-                            </div>
-                            <div className="card__body">
-                                <div className="card__list">
-                                    <div className="card__item">
-                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text card__text--green">Setup Account</span>
-                                    </div>
+                    <div className="board__wrapper">
+                        <div className="contact">
+                            <div className="contact__wrapper">
+                                <div className="contact__input">
+                                    <label htmlFor="">Country:</label>
+                                    <input type="text" placeholder="Country" />
                                 </div>
-                                <div className="card__list">
-                                    <div className="card__item">
-                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text card__text--green">Upload Your Photo</span>
-                                    </div>
+                                <div className="contact__input">
+                                    <label htmlFor="">Company:</label>
+                                    <input type="text" placeholder="Company" />
                                 </div>
-                                <div className="card__list">
-                                    <div className="card__item">
-                                        <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text card__text--green">Enable Desktop Notification</span>
-                                    </div>
+                                <div className="contact__input">
+                                    <label htmlFor="">Full Name:</label>
+                                    <input type="text" placeholder="Full Name" />
                                 </div>
-                                <div className="card__list">
-                                    <div className="card__item">
-                                        <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text">Invite Team Members (0/1)</span>
-                                    </div>
+                                <div className="contact__input">
+                                    <label htmlFor="">Contact:</label>
+                                    <input type="text" placeholder="Contact" />
                                 </div>
-                                <div className="card__list">
-                                    <div className="card__item">
-                                        <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text">Complete Profile</span>
-                                    </div>
-                                </div>
-                                <div className="card__list">
-                                    <div className="card__item">
-                                        <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
-                                        <span className="card__text">Install Our Mobile App</span>
-                                    </div>
+                                <div className="contact__input">
+                                    <label htmlFor="">Email:</label>
+                                    <input type="text" placeholder="Email" />
                                 </div>
                             </div>
-                            <div className="card__footer">
-                                <div className="battery__power">
-                                    <div className="battery__wrapper">
-                                        <div className="battery__fill">
-                                            <div className="battery__fill--top"></div>
-                                            <div className="battery__fill--bottom"></div>
+
+                            <div className="contact__display">
+                                <div className="contact__text">United States of America</div>
+                                <div className="contact__text">iThots Technology Solutions Pvt. Ltd</div>
+                                <div className="contact__text">Agus</div>
+                                <div className="contact__text">900000000</div>
+                                <div className="contact__text">xxx@gmail.com</div>
+                                <h3>History</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui molestiae saepe quo blanditiis eaque, quibusdam deserunt! Deserunt nesciunt voluptatibus ut.</p>
+                            </div>
+                        </div>
+                        <div className="side__card">
+                            <div className="card">
+                                <div className="card__header">
+                                    <h3>Complete Your Profile</h3>
+                                </div>
+                                <div className="card__body">
+                                    <div className="card__list">
+                                        <div className="card__item">
+                                            <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                            <span className="card__text card__text--green">Setup Account</span>
+                                        </div>
+                                    </div>
+                                    <div className="card__list">
+                                        <div className="card__item">
+                                            <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                            <span className="card__text card__text--green">Upload Your Photo</span>
+                                        </div>
+                                    </div>
+                                    <div className="card__list">
+                                        <div className="card__item">
+                                            <CircleCheckIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                            <span className="card__text card__text--green">Enable Desktop Notification</span>
+                                        </div>
+                                    </div>
+                                    <div className="card__list">
+                                        <div className="card__item">
+                                            <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                            <span className="card__text">Invite Team Members (0/1)</span>
+                                        </div>
+                                    </div>
+                                    <div className="card__list">
+                                        <div className="card__item">
+                                            <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                            <span className="card__text">Complete Profile</span>
+                                        </div>
+                                    </div>
+                                    <div className="card__list">
+                                        <div className="card__item">
+                                            <CircleIcon style={{width: "15", height: "15", marginRight: ".5rem"}} />
+                                            <span className="card__text">Install Our Mobile App</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="card__footer">
+                                    <div className="battery__power">
+                                        <div className="battery__wrapper">
+                                            <div className="battery__fill">
+                                                <div className="battery__fill--top"></div>
+                                                <div className="battery__fill--bottom"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="inbox">
-                            <div className="inbox__title">Inbox View Options</div>
-                            <div className="inbox__input">
-                                <div className="inbox__input-group">
-                                    <input type="radio" id="update" name="inbox" value="update" />
-                                    <label for="update">Inbox Updates</label>
-                                </div>
-                                <div className="inbox__input-group">
-                                    <input type="radio" id="mention" name="inbox" value="mention" />
-                                    <label for="mention">I was Mentioned</label>
-                                </div>
-                                <div className="inbox__input-group">
-                                    <input type="radio" id="office" name="inbox" value="office" />
-                                    <label for="office">All Updates of Google</label>
-                                </div>
-                                <div className="inbox__input-group">
-                                    <input type="radio" id="bookmark" name="inbox" value="bookmark" />
-                                    <label for="bookmark">Bookmarked Updates</label>
+                            <div className="inbox">
+                                <div className="inbox__title">Inbox View Options</div>
+                                <div className="inbox__input">
+                                    <div className="inbox__input-group">
+                                        <input type="radio" id="update" name="inbox" value="update" />
+                                        <label for="update">Inbox Updates</label>
+                                    </div>
+                                    <div className="inbox__input-group">
+                                        <input type="radio" id="mention" name="inbox" value="mention" />
+                                        <label for="mention">I was Mentioned</label>
+                                    </div>
+                                    <div className="inbox__input-group">
+                                        <input type="radio" id="office" name="inbox" value="office" />
+                                        <label for="office">All Updates of Google</label>
+                                    </div>
+                                    <div className="inbox__input-group">
+                                        <input type="radio" id="bookmark" name="inbox" value="bookmark" />
+                                        <label for="bookmark">Bookmarked Updates</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
