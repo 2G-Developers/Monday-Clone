@@ -6,6 +6,7 @@ import {ReactComponent as SlidersIcon} from '../assets/icons/sliders.svg';
 import {ReactComponent as ColumnsIcon} from '../assets/icons/columns.svg';
 
 import './Board.scss'
+import Draggable from '../drag/drag';
 
 export default class Board extends Component {
     render() {
@@ -27,7 +28,12 @@ export default class Board extends Component {
                         </ul>
                     </div>
                 </div>
-                <div className="board__workspace"></div>
+                <div className="board__workspace">
+                    <Draggable />
+                    <Draggable />
+                    <Draggable />
+                    <Draggable />
+                </div>
             </div>
         )
     }
