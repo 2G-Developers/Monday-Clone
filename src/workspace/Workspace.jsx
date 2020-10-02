@@ -6,6 +6,7 @@ import {ReactComponent as FilterIcon} from '../assets/icons/filter.svg';
 import {ReactComponent as PlusCircleIcon} from '../assets/icons/plus-circle.svg';
 import {ReactComponent as SidebarIcon} from '../assets/icons/sidebar.svg';
 import {ReactComponent as BarChartIcon} from '../assets/icons/bar-chart-2.svg';
+import {ReactComponent as ArrowLeftCircle} from '../assets/icons/arrow-left-circle.svg';
 import {ReactComponent as AwardIcon} from '../assets/icons/award.svg';
 import {ReactComponent as FolderIcon} from '../assets/icons/folder.svg';
 import {ReactComponent as ArrowLeftSimpleIcon} from '../assets/icons/arrow-left.svg';
@@ -144,7 +145,7 @@ export default class Workspace extends Component {
                     </ul>
                 </div>
                 <div className="expand-icon" onClick={this.toggleWorkspace}>
-                    <ArrowLeftSimpleIcon style={{"height":"1.125rem"}} />
+                    <ArrowLeftCircle style={{"height":"1.875rem", "stroke": "#323338", strokeWidth: "1"}} />
                 </div>
             </div>
             

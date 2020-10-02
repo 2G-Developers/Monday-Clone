@@ -100,25 +100,20 @@
 .expand-icon {
     position: absolute;
     top: 30px;
-    width: 1.3125rem;
-    height: 1.3125rem;
     background: #fff;
-    border-radius: 50%;
-    border: 1px solid #e6e9ef;
     text-align: center;
     right: -15px;
     z-index: 200;
     cursor: pointer;
     transition: all .4s ease-out;
 
-    &:hover {
-        background: #0093FF;
-        width: 25px;
-        border-radius: 35%;
+    path {
+        stroke: #323338;
+        stroke-width: 1px;
     }
 
     &:hover path {
-        stroke: #fff !important;
+        stroke: #0093FF !important;
     }
 }
 
