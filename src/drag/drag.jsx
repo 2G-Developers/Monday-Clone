@@ -85,7 +85,7 @@ activateLasers(){
     <div className="App-draggable">
     
         <div className="app-list-collapse">
-            <ArrowLeftCircle style={{width:"18", height:"18", transform: "rotate(270deg)", fill: "#A25DDC", stroke: "#fff"}} onClick={this.activateLasers.bind(this)} />
+            <ArrowLeftCircle style={{width:"1.125rem", height:"1.125rem", transform: "rotate(270deg)", fill: "#A25DDC", stroke: "#fff", cursor: "pointer"}} onClick={this.activateLasers.bind(this)} />
              <div class="app-text"> Phase 2 </div>
          </div>
 
