@@ -49,7 +49,7 @@ export default class Workspace extends Component {
                             <input type="text" placeholder="New Blank Board" />
                         </div>
                         <div className="dialog__radio">
-                            <input type="radio" id="main" name="visibility" value="main" checked />
+                            <input type="radio" id="main" name="visibility" value="main" />
                             <label for="main">Main</label>
                             <input type="radio" id="private" name="visibility" value="private" />
                             <label for="private">Private</label>

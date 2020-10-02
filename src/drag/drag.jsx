@@ -1,8 +1,11 @@
 import React from 'react';
 import './drag.scss';
 import DragSortableList from 'react-drag-sortable' 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComment,faUserCircle,faList,faChevronCircleDown,faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
+
+import {ReactComponent as ArrowLeftCircle} from '../assets/icons/arrow-left-circle.svg';
+import {ReactComponent as ChatIcon} from '../assets/icons/chat.svg';
+import {ReactComponent as ListIcon} from '../assets/icons/list.svg';
+import {ReactComponent as UserIcon} from '../assets/icons/user.svg';
 
 class Bar extends React.Component {
   constructor() {
@@ -25,15 +28,15 @@ class Bar extends React.Component {
             }<a role="button" title="Edit" className="showme" onClick={this.handleEditClick.bind(this)}><span>✏️</span></a>
         </div>
         <div className="comment">
-            <FontAwesomeIcon icon={faComment} title="comment" />
+            <ChatIcon style={{strokeWidth: "1.5", stroke: "#c5c7d0"}}/>
         </div>
         <div className="vline"></div> 
         <div className="comment">
-            <FontAwesomeIcon icon={faUserCircle}  title="profile"/>
+            <UserIcon style={{ stroke: "#c5c7d0"}} />
         </div>
         <div className="vline"></div> 
         <div className="comment">
-            <FontAwesomeIcon icon={faList}  title="tasks"/>
+            <ListIcon style={{ stroke: "#c5c7d0"}} />
         </div>
         <div className="vline"></div> 
         <div className="priority-place" style={{backgroundColor: this.props.prioritycolor }} title="level" >
@@ -64,7 +67,6 @@ activateLasers(){
     this.setState((prevState) => ({caret: !prevState.caret}));
 }
  render() {  
- var caretState = {true:faChevronCircleDown,false:faChevronCircleRight} 
  var listState = {true:"app-list-set",false:"app-list-set-hide"} 
      var list = [
     {content: <Bar text={"Test1"} prioritycolor="#FDAB3D" priority="MEDIUM" />},
@@ -72,27 +74,19 @@ activateLasers(){
     {content: <Bar text={"Test3"} prioritycolor="#00C875" priority="LOW" />}
 
 ];
-//  var onSort = function() {
-//     console.log("sortedList");
-//  }
-//  var placeholder = (
-//     <div className="placeholderContent"> DROP HERE ! </div>
-// );
-
 
     return (
     <div className="App-draggable">
     
         <div className="app-list-collapse">
-            {
-            // eslint-disable-next-line
-            }<FontAwesomeIcon className="down-caret"  className="carat-design" onClick={this.activateLasers.bind(this)} icon={caretState[this.state.caret]} />
+            <ArrowLeftCircle style={{width:"18", height:"18", transform: "rotate(270deg)", fill: "#A25DDC", stroke: "#fff"}} onClick={this.activateLasers.bind(this)} />
              <div class="app-text"> Phase 2 </div>
          </div>
-            <div className={listState[this.state.caret]}>
-                
-                <DragSortableList items={list}   type="vertical"/>
-            </div>
+
+        <div className={listState[this.state.caret]}>
+            
+            <DragSortableList items={list}   type="vertical"/>
+        </div>
     </div>
   );
     }
