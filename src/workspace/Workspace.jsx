@@ -78,6 +78,9 @@ export default class Workspace extends Component {
             <>
             <div className={this.state.active ? 'workspace workspace--shirnk': 'workspace'}>
                 <div className="workspace__title">
+                    <div className="workspace__text-icon">
+                        <span>M</span>
+                    </div>
                     Main workspace
                 </div>
 

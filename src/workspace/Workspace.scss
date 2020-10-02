@@ -7,6 +7,23 @@
     position: relative;
     transition: all 400ms ease-in;
 
+    &__text-icon {
+        background: rgb(242, 121, 242);
+        width: 25px;
+        height: 25px;
+        border-radius: 8px;
+        font-weight: 500;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.2rem;
+
+        span {
+            color: #fff;
+        }
+    }
+
     &--shirnk {
         width: 0;
 
@@ -22,6 +39,9 @@
 
     &__title {
         margin: 1rem 0;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
     }
 
     &__link {
