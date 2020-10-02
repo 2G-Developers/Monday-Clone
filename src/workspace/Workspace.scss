@@ -2,17 +2,48 @@
     width: 250px;
     height: 100%;
     padding: 0 1rem;
-    border-right: 1px solid #323338;
+    border-right: 1px solid #E6E9EF;
     background-color: #fff;
     position: relative;
     transition: all 400ms ease-in;
 
+    &__text-icon {
+        background: rgb(242, 121, 242);
+        width: 25px;
+        height: 25px;
+        border-radius: 8px;
+        font-weight: 500;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.2rem;
+
+        span {
+            color: #fff;
+        }
+    }
+
     &--shirnk {
         width: 0;
+
+        .expand-icon {
+            transform: rotate(180deg);
+        }
 
         .workspace__menu, .workspace__board, .workspace__title {
             visibility: hidden;
 
+        }
+    }
+
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        svg {
+            transform: rotate(180deg);
         }
     }
 
@@ -22,11 +53,16 @@
 
     &__title {
         margin: 1rem 0;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
     }
+
 
     &__link {
         text-decoration: none;
         display: flex;
+        color: #323338;
     }
 
     &__icon {
@@ -36,6 +72,7 @@
     &__list {
         margin: .5rem 0;
         padding: .275rem .3rem;
+        position: relative;
         border-radius: 3px;
         color: #323338;
 
@@ -55,14 +92,161 @@
 
     &__menu {
         padding-bottom: 1.125rem;
-        border-bottom: 1px solid #323338;
+        border-bottom: 1px solid #E6E9EF;
     }
 }
 
 .expand-icon {
     position: absolute;
     top: 30px;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #e6e9ef;
+    text-align: center;
     right: -15px;
     z-index: 200;
     cursor: pointer;
+    transition: all .4s ease-out;
+
+    &:hover {
+        background: #0093FF;
+        width: 25px;
+        border-radius: 35%;
+    }
+
+    &:hover path {
+        stroke: #fff !important;
+    }
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #fff;
+    min-width: 280px;
+    border-radius: 3px;
+    margin-left: 1rem;
+    display: block;
+    padding: 12px 10px;
+    box-shadow: 0 4px 17px 6px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 100%;
+    z-index: 300;
+
+    &--toggle {
+        display: none;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .dropdown {
+        &__link {
+            text-decoration: none;
+            color: #323338;
+            display: flex;
+        }
+
+        &__item {
+            padding: .5rem;
+            border-radius: 3px;
+
+            &:hover {
+                background-color: #0085ff;
+                color: #fff;
+
+                .dropdown__link {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 400;
+    background: rgba(41,47,76,0.7);
+}
+
+.dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 1rem;
+    background: #fff;
+    z-index: 500;
+    box-shadow: rgba(0,0,0,0.7) 0 25px 50px -15px;
+    border-radius: 8px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    
+
+    &__input {
+        margin: 1rem 0;
+
+        input {
+            width: 95%;
+            border: 1px solid #c5c7d0;
+            padding: 0.5rem;
+            border-radius: 3px;
+        }
+    }
+
+    &__label, &__radio {
+        color: #9699a6;
+    }
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__radio {
+        margin-bottom: 0.5rem;
+
+        input {
+            margin-right: 0.2rem;
+        }
+
+        label {
+            margin-right: 0.5rem;
+            color: #323338;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__cta {
+        background: #0085ff;
+        outline: none;
+        border: 1px solid #0085ff;
+        cursor: pointer;
+        margin-right: 1rem;
+        margin-top: 2rem;
+        color: #fff;
+        border-radius: 3px;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+
+        &--secondary {
+            color: #9699a6;
+            background: #fff;
+        }
+    }
 }

@@ -12,6 +12,7 @@
 
     &__description {
         font-size: .875rem;
+        color: #323338;
 
         &:hover {
             border: 1px dashed #c4c4c4;
@@ -21,13 +22,22 @@
     &__title {
         font-size: 2rem;
         font-weight: 600;
-        color: #000;
+        color: #323338;
         flex-grow: 1;
         display: flex;
         align-items: flex-end;
 
         &:hover {
             border: 1px dashed #c4c4c4;
+        }
+    }
+
+    .star-icon {
+        cursor: pointer;
+
+        &:hover {
+            fill: #ffcb00 !important;
+            stroke: #ffcb00 !important;
         }
     }
 
@@ -38,6 +48,7 @@
 
     &__integrate {
         display: flex;
+        color: #323338;
     }
 
     &__text {
@@ -54,10 +65,15 @@
 
     &__button {
         text-decoration: none;
-        border: 1px solid #000;
+        border: 1px solid #e6e9ef;
+        color: #323338;
         padding: .5rem;
         margin-right: 0.5rem;
         border-radius: 3px;
+
+        &:hover {
+            background: #c5c7d0;
+        }
 
         &--secondary {
             padding: .5rem 1rem;
@@ -70,9 +86,15 @@
     position: relative;
     width: 40px;
     height: 40px;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
 
     &--circle {
         border-radius: 50%;
+        opacity: 1;
 
         img {
             border-radius: 50%;

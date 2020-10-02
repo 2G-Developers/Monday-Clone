@@ -1,0 +1,48 @@
+.task-sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 550px;
+    background: #fff;
+    z-index: 500;
+    padding: 2rem 1rem;
+    transform: translateX(100%);
+    transition: all .4s ease-out;
+
+    &--animate {
+        transform: translateX(0);
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &__updates {
+        margin-top: 2rem;
+        font-size: 13px;
+        color: #676879;
+        border: 1px solid #676879;
+        padding: 15px;
+        text-align: center;
+    }
+
+    &__input {
+        margin-top: 2rem;
+        width: 96%;
+        input {
+            border: 1px solid #0085ff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: text;
+            width: 96%;
+        }
+    }
+}
