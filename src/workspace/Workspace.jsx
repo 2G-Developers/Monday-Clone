@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import './Workspace.scss'
 
 import {ReactComponent as SearchIcon} from '../assets/icons/search.svg';
-import {ReactComponent as ArrowLeftIcon} from '../assets/icons/arrow-left-circle.svg';
 import {ReactComponent as FilterIcon} from '../assets/icons/filter.svg';
 import {ReactComponent as PlusCircleIcon} from '../assets/icons/plus-circle.svg';
 import {ReactComponent as SidebarIcon} from '../assets/icons/sidebar.svg';
 import {ReactComponent as BarChartIcon} from '../assets/icons/bar-chart-2.svg';
 import {ReactComponent as AwardIcon} from '../assets/icons/award.svg';
 import {ReactComponent as FolderIcon} from '../assets/icons/folder.svg';
+import {ReactComponent as ArrowLeftSimpleIcon} from '../assets/icons/arrow-left.svg';
 
 export default class Workspace extends Component {
     constructor() {
@@ -20,19 +20,16 @@ export default class Workspace extends Component {
         }
     }
 
-    toggleWorkspace = (e) => {
-        e.preventDefault();
+    toggleWorkspace = () => {
         this.setState((prevState) => ({ active: !prevState.active }))
     }
 
-    toggleDropdown = (e) => {
-        e.preventDefault();
+    toggleDropdown = () => {
         this.setState((prevState) => ({ dropdownActive: !prevState.dropdownActive }))
     }
 
-    toggleDialog = (e) => {
-        e.preventDefault();
-        this.setState((prevState) => ({ dialogActive: !prevState.dialogActive }))
+    toggleDialog = () => {
+        this.setState((prevState) => ({ dialogActive: !prevState.dialogActive, dropdownActive: true }))
     }
 
     render() {
@@ -93,7 +90,7 @@ export default class Workspace extends Component {
                                 <span className="workspace__icon">
                                     <PlusCircleIcon style={{"width":"14","height":"21"}} />
                                 </span>
-                                <div className="workspace__name">Add</div>
+                                <div className="workspace__name">Add <ArrowLeftSimpleIcon style={{"width":"14","height":"21"}}  /> </div>
                             </a>
                             <div className={this.state.dropdownActive ? 'dropdown-content dropdown-content--toggle': 'dropdown-content'}>
                                 <ul>
@@ -147,7 +144,7 @@ export default class Workspace extends Component {
                     </ul>
                 </div>
                 <div className="expand-icon" onClick={this.toggleWorkspace}>
-                    <ArrowLeftIcon style={{"width":"21","height":"21"}} />
+                    <ArrowLeftSimpleIcon style={{"height":"18"}} />
                 </div>
             </div>
             

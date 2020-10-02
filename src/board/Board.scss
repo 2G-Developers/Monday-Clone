@@ -1,6 +1,8 @@
 .board {
     // height: 100%;
     margin-top: 2rem;
+    height: 85vh;
+    overflow-y: auto;
 
     ul {
         list-style-type: none;
@@ -10,6 +12,10 @@
     a {
         text-decoration: none;
     }
+
+    // &__workspace {
+        
+    // }
 
     &__view {
         display: flex;

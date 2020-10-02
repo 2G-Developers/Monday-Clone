@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment,faUserCircle,faList,faChevronCircleDown,faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 class Bar extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       editModeEnabled: false,
     }
@@ -20,7 +20,9 @@ class Bar extends React.Component {
         <div className="color-code"></div>
         <div className="text-place">
             <input type="text" className="text-box" value={this.props.text} disabled={!this.state.editModeEnabled}/>
-            <a role="button" title="Edit" className="showme" onClick={this.handleEditClick.bind(this)}>✏️</a>
+            {
+            // eslint-disable-next-line
+            }<a role="button" title="Edit" className="showme" onClick={this.handleEditClick.bind(this)}><span>✏️</span></a>
         </div>
         <div className="comment">
             <FontAwesomeIcon icon={faComment} title="comment" />
@@ -50,8 +52,8 @@ class Bar extends React.Component {
 
 
 class Draggable extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super()
     this.state = {
       caret: true,
     }
@@ -59,7 +61,7 @@ class Draggable extends React.Component {
   }
 
 activateLasers(){
-    this.setState({caret:!this.state.caret});
+    this.setState((prevState) => ({caret: !prevState.caret}));
 }
  render() {  
  var caretState = {true:faChevronCircleDown,false:faChevronCircleRight} 
@@ -70,19 +72,21 @@ activateLasers(){
     {content: <Bar text={"Test3"} prioritycolor="#00C875" priority="LOW" />}
 
 ];
- var onSort = function() {
-    console.log("sortedList");
- }
- var placeholder = (
-    <div className="placeholderContent"> DROP HERE ! </div>
-);
+//  var onSort = function() {
+//     console.log("sortedList");
+//  }
+//  var placeholder = (
+//     <div className="placeholderContent"> DROP HERE ! </div>
+// );
 
 
     return (
-    <div className="App">
+    <div className="App-draggable">
     
         <div className="app-list-collapse">
-             <FontAwesomeIcon className="down-caret"  className="carat-design" onClick={this.activateLasers.bind(this)} icon={caretState[this.state.caret]} />
+            {
+            // eslint-disable-next-line
+            }<FontAwesomeIcon className="down-caret"  className="carat-design" onClick={this.activateLasers.bind(this)} icon={caretState[this.state.caret]} />
              <div class="app-text"> Phase 2 </div>
          </div>
             <div className={listState[this.state.caret]}>
