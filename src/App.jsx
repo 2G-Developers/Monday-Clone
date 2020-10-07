@@ -13,9 +13,6 @@ function App() {
         <Workspace />
         <Project />
       </div>
-      <div className="brand">
-        Developed By Gopalakrishnan C, 2G Developers
-      </div>
     </div>
   );
 }
